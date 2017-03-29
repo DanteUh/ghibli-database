@@ -1,0 +1,51 @@
+.footer-section {
+    height: 140px;
+    width: 100%;
+    color: rgba( 255, 255, 255, 0.8 );
+    background-color: $gray;
+}
+
+.footer-container {
+    height: 100%;
+}
+
+.footer-content {
+    height: 100%;
+}
+
+.footer-content a {
+    color: rgba( 255, 255, 255, 0.8 );
+}
+
+footer adress {
+    font-size: 0.9rem;
+}
+
+.footer-adress a {
+    color: rgba( 0, 126, 255, 0.9 );
+}
+
+.footer-adress a:hover {
+    color: $light-blue;
+    transition: all 0.1s ease-in-out;
+}
+
+.created-by{
+    font-size: 0.9rem;
+    margin-bottom: 0px;
+    color: rgba( 255, 255, 255, 0.6 );
+}
+
+//Fixed Footer
+.page-wrap {
+    min-height: 100%;
+  /* equal to footer height */
+    margin-bottom: -140px;
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.footer-section, .page-wrap:after {
+  height: 140px; 
+}

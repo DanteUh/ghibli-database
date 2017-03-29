@@ -1,0 +1,25 @@
+.jumbotron {
+    background-color: white;
+}
+
+/*.github-nav a {
+    color: $gray;
+}*/
+
+.svg-logo {
+    height: 250px;
+}
+
+.search-btn {
+    background-color: #007eff;
+}
+
+input[type="search"]::-webkit-input-placeholder {
+    color: $light-blue;
+    opacity: 0.5;
+}
+
+input[type="checkbox"]{
+    color: $light-blue;
+    border-color: #007eff;
+}

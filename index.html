@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Examination AJAX</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="pace-page-loader/minimal.css">
+</head
+<body>
+<!--Header Section-->
+    <div class="page-wrap">
+      <header class="jumbotron pt-3 pb-3">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <img src="images/svg/logo-big.svg" class="svg-logo img-fluid mb-3" alt="Responsive image">
+                </div>
+                <div class="row justify-content-center">
+                    <input class="form-control col-md-6 col-sm-12 text-info" type="search" placeholder="Search for persons, movies etc.">
+                    <button class="search-btn btn btn-info col-md-2" type="button" id="search-btn">Search</button>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="mt-3" data-toggle="buttons">
+                        <label class="btn btn-outline-info" id="film-btn">
+                          <input type="checkbox" autocomplete="off" id="film-check">
+                          Films
+                        </label>
+                        <label class="btn btn-outline-info" id="people-btn">
+                          <input type="checkbox" autocomplete="off" id="people-check">
+                          People
+                        </label>
+                        <label class="btn btn-outline-info">
+                          <input type="checkbox" autocomplete="off" id="location-check">
+                          Locations
+                        </label>
+                        <label class="btn btn-outline-info">
+                          <input type="checkbox" autocomplete="off" id="species-check">
+                          Species
+                        </label>
+                        <label class="btn btn-outline-info">
+                          <input type="checkbox" autocomplete="off" id="vehicle-check">
+                          Vehicles
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </header>
+    <!--Header Section Ends-->
+    <!--Data Section--> 
+        <main class="data-section" id="data-section">
+           <div class="container" id="data-container">
+
+                <div class="row data-row" id="data-row">
+                </div>
+
+                <table class="table table-hover mb-5 hidden" id="people-table">
+                    <thead>
+                        <tr>
+                         <h4 class="hidden" id="people-heading">People</h4>
+                          <th>#</th>
+                          <th>Name</th>
+                          <th>Age</th>
+                          <th>Eye color</th>
+                          <th>Hair color</th>
+                        </tr>
+                      </thead>
+                      <tbody id="people-table-body">
+                      </tbody>
+                </table>
+                <table class="table table-hover mb-5 hidden" id="location-table">
+                    <thead>
+                        <tr>
+                         <h4 class="hidden" id="location-heading">Locations</h4>
+                          <th>#</th>
+                          <th>Name</th>
+                          <th>Climate</th>
+                          <th>Terrain</th>
+                          <th>Surface water</th>
+                        </tr>
+                      </thead>
+                      <tbody id="location-table-body">
+                      </tbody>
+                </table>
+                <table class="table table-hover mb-5 hidden" id="species-table">
+                    <thead>
+                        <tr>
+                         <h4 class="hidden" id="species-heading">Species</h4>
+                          <th>#</th>
+                          <th>Name</th>
+                          <th>Classification</th>
+                          <th>Eye colors</th>
+                          <th>Hair colors</th>
+                        </tr>
+                      </thead>
+                      <tbody id="species-table-body">
+                      </tbody>
+                </table>
+                <table class="table table-hover mb-5 hidden" id="vehicle-table">
+                    <thead>
+                        <tr>
+                         <h4 class="hidden" id="vehicle-heading">Vehicles</h4>
+                          <th>#</th>
+                          <th>Name</th>
+                          <th>Vehicle Class</th>
+                          <th>Description</th>
+                          <th>Length</th>
+                        </tr>
+                      </thead>
+                      <tbody id="vehicle-table-body">
+                      </tbody>
+                </table>
+            </div> 
+        </main>
+    </div>
+<!--Data Section Ends-->
+<!--Footer--> 
+    <footer class="footer-section">
+        <div class="container footer-container">
+            <section class="row justify-content-between align-items-center footer-content">
+                <adress class="align-self-center ml-3 footer-adress">
+                    <p class="mb-1">Mail: <a href="#">dante.uhlinder@gmail.com</a></p>
+                    <p class="mb-2">Tel: <a href="#">073-075 33 96</a></p>
+                    <p class="mt-4 created-by">Created by Dante Ulinder</p>
+                </adress>
+                <nav class="social-icons align-self-center">
+                    <a href="#"><i class="fa fa-github fa-3x mr-3" aria-hidden="true"></i></a>
+                    <!--<a href="#"><i class="fa fa-facebook fa-lg mr-3" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-linkedin fa-lg mr-3" aria-hidden="true"></i></a>-->
+                </nav>
+            </section>
+        </div>
+    </footer>
+<!--Footer Ends-->
+
+<!--Script Section-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script src="js/utilities.js"></script>
+    <script src="js/view.js"></script>
+    <script src="pace-page-loader/script.js"></script>
+<!--Script Section Ends-->
+</body>
+</html>
