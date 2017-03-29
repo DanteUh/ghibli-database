@@ -7,19 +7,7 @@ var getGhibliData = (function() {
             contentType: 'application/json; charset=utf-8',
             dataType: 'json',
             success: (response) => {
-                updateView.filmsImgHTML(response);
-            },
-            error: (error) => {alert('There was an error with the Film request')}
-        });
-    }
-    function getFilmsArray() {
-        $.ajax({
-            method: 'GET',
-            url: 'https://ghibliapi.herokuapp.com/films',
-            contentType: 'application/json; charset=utf-8',
-            dataType: 'json',
-            success: (response) => {
-                return response;
+                updateView.filmsHTML(response);
             },
             error: (error) => {alert('There was an error with the Film request')}
         });
@@ -74,7 +62,6 @@ var getGhibliData = (function() {
     }
     return {
         getFilms: getFilms,
-        getFilmsArray: getFilmsArray,
         getPeople: getPeople,
         getLocations: getLocations,
         getSpecies: getSpecies,
@@ -83,13 +70,13 @@ var getGhibliData = (function() {
 })();
 $('#search-btn').on('click', function(){
     //Films
-    utilities.getDataHTML('#film-check', '#film-heading', '#film-table', getGhibliData.getFilms());
+    utilities.getDataHTML('#film-check', '#film-data-row', getGhibliData.getFilms());
     //People
-    utilities.getDataHTML('#people-check', '#people-heading', '#people-table', getGhibliData.getPeople());
+    utilities.getDataHTML('#people-check', '#people-table', getGhibliData.getPeople(), '#people-heading');
     //Locations
-    utilities.getDataHTML('#location-check', '#location-heading', '#location-table', getGhibliData.getLocations());
+    utilities.getDataHTML('#location-check', '#location-table', getGhibliData.getLocations(), '#location-heading');
     //Species
-    utilities.getDataHTML('#species-check', '#species-heading', '#species-table', getGhibliData.getSpecies());
+    utilities.getDataHTML('#species-check', '#species-table', getGhibliData.getSpecies(), '#species-heading');
     //Vehicles
-    utilities.getDataHTML('#vehicle-check', '#vehicle-heading', '#vehicle-table', getGhibliData.getVehicles());
+    utilities.getDataHTML('#vehicle-check', '#vehicle-table', getGhibliData.getVehicles(), '#vehicle-heading');
 });

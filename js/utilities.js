@@ -1,12 +1,12 @@
 var utilities = (function() {
-    function getDataHTML(check, heading, table, dataFunction) {
+    function getDataHTML(check, element, dataFunction, heading) {
         if($(check)[0].checked){
             $(heading).show();
-            $(table).show();
+            $(element).show();
             dataFunction;
         } else {
             $(heading).hide();
-            $(table).hide();
+            $(element).hide();
         }
     }
     return {

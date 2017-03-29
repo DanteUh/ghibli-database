@@ -1,7 +1,7 @@
 var updateView = (function() {
     
-    function filmsImgHTML(data) {
-        const dataRow = $('#data-row');
+    function filmsHTML(data) {
+        const dataRow = $('#film-data-row');
         dataRow.empty();
         for(let i = 0; i < data.length; i++){
             let dataElements = `
@@ -18,29 +18,6 @@ var updateView = (function() {
                 </section>`;
             
             dataRow.append(dataElements);
-        }
-    }
-    
-    
-    
-    
-    
-    function filmsHTML(data){
-        const dataTable = $('#film-table-body');
-        dataTable.empty();
-        let x = 1;
-        for(let i = 0; i < data.length; i++){
-            let dataElmenets = `
-                    <tr>
-                        <th scope="row">${x + i}</th>
-                        <td>${data[i].title}</td>
-                        <td>${data[i].director}</td>
-                        <td>${data[i].release_date}</td>
-                        <td>${data[i].rt_score}</td>
-                    </tr>
-                  `;
-            
-            dataTable.append(dataElmenets);
         }
     }
     function peopleHTML(data){
@@ -113,7 +90,6 @@ var updateView = (function() {
     }
     return {
         filmsHTML: filmsHTML,
-        filmsImgHTML,
         peopleHTML: peopleHTML,
         locationsHTML: locationsHTML,
         speciesHTML: speciesHTML,
