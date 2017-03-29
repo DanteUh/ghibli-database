@@ -5,11 +5,11 @@ var updateView = (function() {
         dataRow.empty();
         for(let i = 0; i < data.length; i++){
             let dataElements = `
-                <section class="film-section col-lg-3 col-md-4 col-xs-6 mb-4">
+                <section class="film-section col-lg-3 col-md-4 col-sm-6 mb-4">
                     <img src="images/jpg/${data[i].id}.jpg" class="img-fluid mb-2" alt="Thumbnail">
                     <div class="text-section">
                         <h5>${data[i].title}</h5>
-                        <ul class="movie-ul list-group">
+                        <ul class="list-group">
                             <li class="list-group-item">Director: ${data[i].director}</li>
                             <li class="list-group-item">Release Date: ${data[i].release_date}</li>
                             <li class="list-group-item">Score: ${data[i].rt_score}</li>

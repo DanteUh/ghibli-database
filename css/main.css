@@ -410,6 +410,12 @@ template {
 .hidden {
   display: none; }
 
+.film-section {
+  width: auto; }
+
+.film-data-row {
+  width: auto; }
+
 .footer-section {
   height: 140px;
   width: 100%;
