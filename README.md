@@ -1,4 +1,4 @@
-# Examination - Ghibli Database
+# Examination Ajax - Ghibli Database
 
 ###### Dante Ulinder
 ###### Period: 2017-03-13 - 2017-03-30
