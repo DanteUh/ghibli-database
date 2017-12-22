@@ -9,7 +9,7 @@
 #### Live Version: https://danteuh.github.io/ghibli-database/
 ------
 ### About:
-The idea with this application is that I wanted to create a clean stylish way to learn more about the Ghibli universe since I'm in to this shit, YEAAH! *ehm*.. :octocat:
+The idea with this application is that I wanted to create a clean stylish way to learn more about the Ghibli universe since I'm in to this, YEAAH! *ehm*.. :octocat:
 
 The functionality is pretty straight forward. You should be able to search and sort by category for information and resources you want to know more about. As it is right now the search input field is not yet implemented. It would definitely be something to look into in the future.
 
